@@ -42,7 +42,7 @@ export function DayOverview() {
         <div className="mt-5 grid grid-cols-3 gap-2.5">
           <Stat icon={<ListChecks />} label="Total" value={total} />
           <Stat icon={<CheckCircle2 />} label="Hechas" value={completed} />
-          <Stat icon={<Circle />} label="Pendientes" value={pending} />
+          <Stat icon={<Circle />} label="Quedan" value={pending} />
         </div>
       </div>
     </section>

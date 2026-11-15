@@ -72,7 +72,7 @@ function TasksPage() {
         </label>
       </div>
 
-      <div className="grid items-start gap-4 sm:gap-6 lg:grid-cols-2">
+      <div className="grid grid-cols-1 items-start gap-4 sm:gap-6 lg:grid-cols-2">
         {days.map((offset) => {
           const dayTasks = filtered.filter((t) => t.dayOffset === offset);
           const progress = getProgress(tasks.filter((t) => t.dayOffset === offset));

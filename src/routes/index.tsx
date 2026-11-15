@@ -26,18 +26,18 @@ function Dashboard() {
     <div className="space-y-6 sm:space-y-8">
       <GreetingHeader />
 
-      <div className="grid gap-4 sm:gap-6 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-4 sm:gap-6 lg:grid-cols-3">
         <div className="lg:col-span-2">
           <DayOverview />
         </div>
         <NextUpCard />
       </div>
 
-      <div className="grid items-start gap-4 sm:gap-6 lg:grid-cols-3">
+      <div className="grid grid-cols-1 items-start gap-4 sm:gap-6 lg:grid-cols-3">
         <div className="lg:col-span-2">
           <TodayTasks />
         </div>
-        <div className="grid gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-1">
+        <div className="grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-1">
           <UpcomingActivities limit={4} />
           <QuickNotes />
         </div>

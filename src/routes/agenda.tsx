@@ -74,7 +74,7 @@ function AgendaPage() {
         })}
       </div>
 
-      <div className="grid items-start gap-4 sm:gap-6 lg:grid-cols-2">
+      <div className="grid grid-cols-1 items-start gap-4 sm:gap-6 lg:grid-cols-2">
         <SectionCard title={`Actividades · ${dayOffsetLabel(selected, today)}`} icon={<CalendarDays />}>
           {dayActivities.length ? (
             <ActivityList activities={dayActivities} />
