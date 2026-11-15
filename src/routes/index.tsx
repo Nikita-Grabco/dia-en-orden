@@ -1,23 +1,47 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-// The home route ships no og:image, so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+import { DayOverview } from "@/components/dashboard/day-overview";
+import { GreetingHeader } from "@/components/dashboard/greeting-header";
+import { NextUpCard } from "@/components/dashboard/next-up-card";
+import { QuickNotes } from "@/components/dashboard/quick-notes";
+import { TodayTasks } from "@/components/dashboard/today-tasks";
+import { UpcomingActivities } from "@/components/dashboard/upcoming-activities";
+
 export const Route = createFileRoute("/")({
-  component: Index,
+  head: () => ({
+    meta: [
+      { title: "Calma — Tu día, organizado" },
+      { name: "description", content: "Organiza tu día: tareas, progreso diario, próximas actividades y notas en un solo lugar." },
+      { property: "og:title", content: "Calma — Tu día, organizado" },
+      { property: "og:description", content: "Tareas, progreso diario, próximas actividades y notas en un solo lugar." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
+  component: Dashboard,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
+function Dashboard() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="space-y-6 sm:space-y-8">
+      <GreetingHeader />
+
+      <div className="grid gap-4 sm:gap-6 lg:grid-cols-3">
+        <div className="lg:col-span-2">
+          <DayOverview />
+        </div>
+        <NextUpCard />
+      </div>
+
+      <div className="grid items-start gap-4 sm:gap-6 lg:grid-cols-3">
+        <div className="lg:col-span-2">
+          <TodayTasks />
+        </div>
+        <div className="grid gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-1">
+          <UpcomingActivities limit={4} />
+          <QuickNotes />
+        </div>
+      </div>
     </div>
   );
 }
