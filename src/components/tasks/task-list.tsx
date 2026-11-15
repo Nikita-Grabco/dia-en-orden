@@ -8,7 +8,7 @@ import { TaskItem } from "./task-item";
 interface TaskListProps {
   tasks: Task[];
   emptyTitle?: string;
-  emptyDescription?: string;
+  emptyDescription?: string | undefined;
 }
 
 export function TaskList({ tasks, emptyTitle = "Nada por aquí", emptyDescription }: TaskListProps) {

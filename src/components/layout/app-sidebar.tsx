@@ -23,7 +23,7 @@ export function AppSidebar() {
           <Link
             key={item.to}
             to={item.to}
-            activeOptions={{ exact: item.exact }}
+            activeOptions={{ exact: item.exact ?? false }}
             title={item.label}
             className="group flex items-center justify-center gap-3 rounded-xl px-3 py-2.5 text-sm font-semibold text-sidebar-foreground/65 transition-colors hover:bg-sidebar-accent/60 hover:text-sidebar-foreground data-[status=active]:bg-sidebar-accent data-[status=active]:text-sidebar-primary lg:justify-start"
           >

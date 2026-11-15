@@ -12,7 +12,7 @@ export interface Task {
   /** Days from today: 0 = today, 1 = tomorrow… */
   dayOffset: number;
   /** Optional "HH:mm" time. */
-  time?: string;
+  time?: string | undefined;
   completed: boolean;
 }
 
@@ -22,8 +22,8 @@ export interface Activity {
   category: CategoryId;
   dayOffset: number;
   start: string;
-  end?: string;
-  location?: string;
+  end?: string | undefined;
+  location?: string | undefined;
 }
 
 export interface Note {
