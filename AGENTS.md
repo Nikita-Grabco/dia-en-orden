@@ -28,3 +28,11 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project rules
+
+- Frontend-only for now: all state lives in `src/store/planner-store.tsx` (React context seeded from `src/data/sample-data.ts`); components only use `usePlanner()`, so a backend can replace the store without touching UI.
+- Domain types live in `src/types/planner.ts`; visual config (categories, priorities, note kinds, nav items) lives in `src/config/` so labels/colors change in one place.
+- Dates are relative (`dayOffset`) and rendered via `useToday()` after hydration to avoid SSR/browser time-zone mismatches.
+- Layout: `AppShell` in `__root.tsx` renders the sidebar (md icon rail, lg full) and the mobile bottom bar from the same `NAV_ITEMS`.
+- Colors only via tokens in `src/styles.css` (category tokens: base / -soft / -ink); no raw color utilities in components.
