@@ -28,7 +28,7 @@ export function TaskItem({ task }: { task: Task }) {
       <div className="min-w-0 flex-1">
         <p
           className={cn(
-            "truncate text-sm font-semibold text-foreground transition-colors",
+            "line-clamp-2 text-sm font-semibold text-foreground transition-colors",
             task.completed && "text-muted-foreground line-through decoration-muted-foreground/50",
           )}
         >
