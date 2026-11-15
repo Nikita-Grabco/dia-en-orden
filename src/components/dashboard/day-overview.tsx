@@ -33,7 +33,7 @@ export function DayOverview() {
       </ProgressRing>
       <div className="w-full min-w-0 flex-1">
         <p className="eyebrow">Resumen del día</p>
-        <h2 className="mt-1 font-display text-3xl leading-tight text-foreground">
+        <h2 className="mt-1 font-display font-semibold text-3xl leading-tight text-foreground">
           {getProgressMessage(percent, total)}
         </h2>
         <p className="mt-1 text-sm text-muted-foreground">

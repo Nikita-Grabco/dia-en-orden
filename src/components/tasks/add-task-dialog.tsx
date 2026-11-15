@@ -64,7 +64,7 @@ export function AddTaskDialog() {
     <Dialog open={addTaskDialog.open} onOpenChange={setAddTaskOpen}>
       <DialogContent className="max-h-[92vh] w-[calc(100%-1.5rem)] overflow-y-auto rounded-3xl sm:max-w-lg sm:rounded-3xl">
         <DialogHeader className="text-left">
-          <DialogTitle className="font-display text-3xl font-normal">Nueva tarea</DialogTitle>
+          <DialogTitle className="font-display text-2xl font-semibold">Nueva tarea</DialogTitle>
           <DialogDescription>Apunta lo que quieres hacer y cuándo.</DialogDescription>
         </DialogHeader>
 

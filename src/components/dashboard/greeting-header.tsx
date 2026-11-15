@@ -16,7 +16,7 @@ export function GreetingHeader() {
       title={
         <>
           {today ? getGreeting(today.getHours()) : "Hola"},{" "}
-          <em className="text-primary">{user.name}</em>
+          <em className="not-italic text-primary">{user.name}</em>
         </>
       }
       description="Esto es lo que tienes por delante hoy."

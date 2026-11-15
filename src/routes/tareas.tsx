@@ -80,7 +80,7 @@ function TasksPage() {
             <section key={offset} className="surface p-5 sm:p-6">
               <div className="mb-3 flex items-center justify-between gap-3">
                 <div>
-                  <h2 className="font-display text-2xl leading-none text-foreground">{dayOffsetLabel(offset, today)}</h2>
+                  <h2 className="font-display font-semibold text-2xl leading-none text-foreground">{dayOffsetLabel(offset, today)}</h2>
                   <p className="mt-1 text-xs text-muted-foreground">
                     {progress.completed} de {progress.total} completadas
                   </p>
